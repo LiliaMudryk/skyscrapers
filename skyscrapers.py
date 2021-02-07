@@ -2,7 +2,6 @@
 This module will allow you to check whether there is a winning combination
 on the board in skyscrapers game.
 """
-import doctest
 def read_input(path: str):
     """
     Read game board file from path.
@@ -188,9 +187,6 @@ def check_skyscrapers(input_path: str):
     Main function to check the status of skyscraper game board.
     Return True if the board status is compliant with the rules,
     False otherwise.
-
-    >>> check_skyscrapers("check.txt")
-    True
     """
     board = read_input(input_path)
     finished = check_not_finished_board(board)
@@ -200,4 +196,3 @@ def check_skyscrapers(input_path: str):
 
 if __name__ == "__main__":
     print(check_skyscrapers("check.txt"))
-print(doctest.testmod())
